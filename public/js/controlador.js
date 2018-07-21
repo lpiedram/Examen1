@@ -6,6 +6,11 @@ btnRegistrar.addEventListener('click', obtenerDatos);
 
 let inputNumero = document.querySelector('#txtNum');
 let inputNombre = document.querySelector('#txtNombre');
+let sltTipo1 = document.querySelector('#sltTipo1');
+let sltTipo2 = document.querySelector('#sltTipo2');
+let inputFiltro = document.querySelector('#txtFiltro');
+
+inputFiltro.addEventListener('keyup', mostrarTablaMed);
 
 function obtenerDatos() {
     let infoPokemon = [];
