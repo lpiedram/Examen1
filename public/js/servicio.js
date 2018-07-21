@@ -14,7 +14,7 @@ function registrarPokemon(painfoPokemon) {
             nombre: painfoPokemon[1],
             tipo1: painfoPokemon[2],
             tipo2: painfoPokemon[3],
-            imagen: painfoPokemon[4]
+            imagen: imagenUrl
         }
     });
 
@@ -39,11 +39,6 @@ function obtenerListaPokemon() {
         dataType: 'json',
         async: false,
         data: {
-            numero: painfoPokemon[0],
-            nombre: painfoPokemon[1],
-            tipo1: painfoPokemon[2],
-            tipo2: painfoPokemon[3],
-            imagen: painfoPokemon[4]
         }
     });
 

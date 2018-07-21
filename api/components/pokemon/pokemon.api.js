@@ -7,9 +7,10 @@ module.exports.registrar = function(req, res){
     let nuevopokemon = new pokemonModel({
         id : req.body.id,
         numero : req.body.numero,
-        nombre : req.body.nombre
-        // tipo1 : req.body.tipo1,
-        // tipo2 : req.body.tipo2
+        nombre : req.body.nombre,
+        tipo1 : req.body.tipo1,
+        tipo2 : req.body.tipo2,
+        foto: req.body.foto
     });
 
     nuevopokemon.save(function(error){
