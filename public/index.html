@@ -11,60 +11,32 @@
         <form action="">
             <div>
                 <label for="txtNum">Numero de la pokedex</label>
-                <input type="number" id="txtNum">
+                <input type="number" id="txtNum" min="0">
             </div>
             <div>
                 <label for="txtNombre">Nombre del Pokemon</label>
                 <input type="text" id="txtNombre">
             </div>
             <div>
-                <select name="tipo" id="sltTipo">Tipo 1:
-                    <option value="bug">Bug</option>
-                    <option value="dark">Dark</option>
-                    <option value="dragon">Dragon</option>
-                    <option value="electric">Electric</option>
-                    <option value="fairy">Fairy</option>
-                    <option value="fighting">Fighting</option>
-                    <option value="fire">Fire</option>
-                    <option value="flying">Flying</option>
-                    <option value="ghost">Ghost</option>
-                    <option value="grass">Grass</option>
-                    <option value="ground">Ground</option>
-                    <option value="ice">Ice</option>
-                    <option value="normal">Normal</option>
-                    <option value="poison">Poison</option>
-                    <option value="pychic">Pychic</option>
-                    <option value="rock">Rock</option>
-                    <option value="steel">Steel</option>
-                    <option value="water">Water</option>
-                </select>
-                <select name="tipo" id="sltTipo2">Tipo 2:
-                    <option value="bug">Bug</option>
-                    <option value="dark">Dark</option>
-                    <option value="dragon">Dragon</option>
-                    <option value="electric">Electric</option>
-                    <option value="fairy">Fairy</option>
-                    <option value="fighting">Fighting</option>
-                    <option value="fire">Fire</option>
-                    <option value="flying">Flying</option>
-                    <option value="ghost">Ghost</option>
-                    <option value="grass">Grass</option>
-                    <option value="ground">Ground</option>
-                    <option value="ice">Ice</option>
-                    <option value="normal">Normal</option>
-                    <option value="poison">Poison</option>
-                    <option value="pychic">Pychic</option>
-                    <option value="rock">Rock</option>
-                    <option value="steel">Steel</option>
-                    <option value="water">Water</option>
-                </select>
-            </div>
-            <div>
                 <button type="button" id="btnFoto">Agregar fotografia</button>
             </div>
             <button type="button" id="btnRegistrar">Registrar</button>
         </form>
+        <table id="tblPokemon">
+            <thead>
+                <th>Numero</th>
+                <th>Nombre</th>
+                <th>Tipo 1</th>
+                <th>Tipo 2</th>
+                <th>Imagen</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </main>
 </body>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     <script src="js/controlador.js"></script>
 </html>
