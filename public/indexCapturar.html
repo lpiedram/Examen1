@@ -42,27 +42,27 @@
     <main>
         <section id="primera">
             <h2>CAPTURAR</h2>
-            <div id="registrar">
+            <form id="registrarE">
                 <div>
                     <label for="txtNum">Numero de Entrenador</label>
-                    <input type="number" id="txtNum" min="0">
+                    <input type="number" id="txtNum" min="0" disabled>
                 </div>
                 <div>
                     <label for="txtNombre">Nombre del Entrenador</label>
-                    <input type="text" id="txtNombre">
+                    <input type="text" id="txtNombre" disabled>
                 </div>
                 <div>
                     <label for="txtEdad">Edad</label>
-                    <input type="number" id="txtEdad" min="15" max="80">
+                    <input type="number" id="txtEdad" min="15" max="80" disabled>
                 </div>
                 <div>
                     <fieldset>
                         <legend>Género</legend>
                         <label for="rbtFem">Femenino</label>
-                        <input type="radio" name="rbtGen" id="rbtFem" value="true">
+                        <input type="radio" name="rbtGen" id="rbtFem" value="true" disabled>
             
                         <label for="rbtMas">Masculino</label>
-                        <input type="radio" name="rbtGen" id="rbtMas" value="false">
+                        <input type="radio" name="rbtGen" id="rbtMas" value="false" disabled>
                     </fieldset>
                 </div>
                 <div>
@@ -70,7 +70,7 @@
                     <select name="sltPokemon" id="sltPokemon"></select>
                 </div>
                 <button type="button" id="btnAsociar">Asociar</button>
-            </div>
+            </form>
             <div id="listarE">
                 <div>
                     <label for="txtFiltro">Buscar</label>

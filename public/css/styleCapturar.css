@@ -87,6 +87,91 @@ main{
 }
     main section#primera{
         height: 800px;
+        padding: 80px 0px 0px 50px;
+        color: #fff;
+    }
+        main section#primera h2{
+            font-size: 2.4em;
+            color: #fe9126;
+            padding-left: 50px;
+        }
+        main section#primera form#registrarE{
+            float: left;
+            margin-right: 100px;
+        }
+            main section#primera div#registrarE form{
+                height: 800px;
+                width: 20%;
+            }
+                main section#primera form#registrarE div label{
+                    padding-right: 40px;
+                }
+                main section#primera form#registrarE div fieldset label{
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+                main section#primera form#registrarE div input{
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    border-radius: 20px;
+                    padding-left: 5px;
+                    outline: none;
+                }
+                main section#primera form#registrarE div select{
+                    margin-left: 20px;
+                    margin-top: 20px;
+                    border-radius: 20px;
+                    padding-left: 5px;
+                    outline: none;
+                }
+                main section#primera form#registrarE div button{
+                    text-decoration: none;
+                    text-align: center;
+                    padding: .5em 20px;
+                    background: #3399cc;
+                    position: relative;
+                    color: #fff;
+                    border: none;
+                    margin-top: 20px;
+                    border-radius: 20px;
+                }
+                main section#primera form#registrarE div button:hover{
+                    background: #fe9126;
+                }
+            main section#primera form#registrarE button{
+                text-decoration: none;
+                text-align: center;
+                padding: .5em 20px;
+                background: #3399cc;
+                position: relative;
+                color: #fff;
+                border: none;
+                margin-top: 20px;
+            }
+                main section#primera form#registrarE button:hover{
+                    background: #fe9126;
+                }
+        main section#primera div#listarE{
+            float: left;
+        }
+            main section#primera div#listarE div label{
+                padding-right: 40px;
+            }
+            main section#primera div#listarE div input{
+                margin-left: 20px;
+                margin-top: 20px;
+                border-radius: 20px;
+                padding-left: 5px;
+                outline: none;
+            }
+            main section#primera div#listarE table{
+                margin-top: 20px;
+            }
+                main section#primera div#listarE table th{
+                    padding: 10px 20px;
+                }
+    main section#primera{
+        height: 800px;
         background: #333;
         padding: 80px 0px 0px 50px;
         color: #fff;
@@ -98,6 +183,7 @@ main{
         }
         main section#primera div#registrar{
             float: left;
+            padding-right: 40px;
         }
             main section#primera div#registrar form{
                 height: 600px;
@@ -105,11 +191,13 @@ main{
             }
                 main section#primera div#registrar form div label{
                     padding-right: 20px;
+                    
                 }
                 main section#primera div#registrar form div input{
                     margin-left: 20px;
+                    margin-top: 20px;
                 }
-        main section#primera div#listarP{
+        main section#primera div#listarE{
             float: left;
         }
     main section#segunda{
