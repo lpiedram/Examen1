@@ -88,78 +88,80 @@
                 <h2>Tipos de Pokémones</h2>
                 <hr>
             </div>
-            <div id="cardsContainer">
+            <div id="cardsContainer" method="post" action="https://www.paypal.com/cgi-bin/webscr">
                 <div id="card">
+                    <input type="hidden" name="cmd" value="_cart">
+                    <input type="hidden" name="add" value="1">
                     <img src="img/tipoBug.jpg" alt="" id="bug">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonB">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoDark.jpg" alt="" id="dark">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonD">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoDragon.jpg" alt="" id="dragon">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonDr">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoElectric.jpg" alt="" id="electric">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonE">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoFairy.jpg" alt="" id="fairy">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonF">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoFighting.jpg" alt="" id="fighting">
-                    <a href="">Ver más</a>
-                </div>
-                <div id="card">
-                    <img src="img/tipoFairy.jpg" alt="" id="fairy">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonFi">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoFire.jpg" alt="" id="fire">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonFir">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoFlying.jpg" alt="" id="flying">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonFy">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoGhost.jpg" alt="" id="ghost">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonG">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoGrass.jpg" alt="" id="grass">
-                    <a href="">Ver más</a>
-                </div>
-                <div id="card">
-                    <img src="img/tipoBug.jpg" alt="" id="bug">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonGr">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoGround.jpg" alt="" id="ground">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonGro">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoIce.jpg" alt="" id="ice">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonI">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoNormal.jpg" alt="" id="normal">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonN">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoPoison.jpg" alt="" id="poison">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonPo">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoPsichic.jpg" alt="" id="psichic">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonPs">Ver Más</button>
                 </div>
                 <div id="card">
                     <img src="img/tipoRock.jpg" alt="" id="rock">
-                    <a href="">Ver más</a>
+                    <button type="button" id="botonR">Ver Más</button>
+                </div>
+                <div id="card">
+                    <img src="img/tipoSteel.jpg" alt="" id="steel">
+                    <button type="button" id="botonS">Ver Más</button>
+                </div>
+                <div id="card">
+                    <img src="img/tipoWater.jpg" alt="" id="water">
+                    <button type="button" id="botonW">Ver Más</button>
                 </div>
             </div>
         </section>
@@ -224,6 +226,9 @@
         </div>
     </footer>
     <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/minicart/3.0.5/minicart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     <script src="js/slider.js"></script>
+    <script src="js/minicart.min.js"></script>
 </body>
 </html>
