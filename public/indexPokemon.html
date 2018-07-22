@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen 1</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylePokemon.css">
+
+</head>
+
+<body>
+    <header>
+        <div id="primero">
+            <p>HELP</p>
+        </div>
+        <div id="segundo">
+            <div id="seg1">
+                <p>
+                    <i class="fas fa-phone"></i>Call us: +506 63261571</p>
+            </div>
+            <div id="seg2">
+                <a href="landing.html"><h1>POKÉMON</h1></a>
+            </div>
+            <div id="seg3">
+                <input type="text" id="txtBuscar" placeholder="Buscar">
+                <a href="" id="btnFiltrar">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <a href="indexPokemon.html">Pokémones</a>
+            <a href="indexEntrenadores.html">Entrenadores</a>
+            <a href="indexCapturar.html">Capturar</a>
+        </nav>
+    </header>
+    <main>
+        <!-- <section id="primera">
+            <h2>Pokémon</h2>
+            <div id="registrarP">
+                <form action="">
+                    <div>
+                        <label for="txtNum">Numero de la pokedex</label>
+                        <input type="number" id="txtNum" min="0">
+                    </div>
+                    <div>
+                        <label for="txtNombre">Nombre del Pokemon</label>
+                        <input type="text" id="txtNombre">
+                    </div>
+                    <div>
+                        <label for="sltTipo1">Tipo 1:</label>
+                        <select id="sltTipo1"></select>
+                    </div>
+                    <div>
+                        <label for="sltTipo2">Tipo 2:</label>
+                        <select id="sltTipo2"></select>
+                    </div>
+                    <div>
+                        <button type="button" id="btnFoto">Agregar fotografia</button>
+                    </div>
+                    <button type="button" id="btnRegistrar">Registrar</button>
+                </form>
+                <div>
+                    <label for="txtFiltro">Buscar</label>
+                    <input type="text" id="txtFiltro">
+                </div>
+            </div>
+            <div id="listarP">
+                <table id="tblPokemon">
+                    <thead>
+                        <th>Numero</th>
+                        <th>Nombre</th>
+                        <th>Tipo 1</th>
+                        <th>Tipo 2</th>
+                        <th>Imagen</th>
+                    </thead>
+                    <tbody>
+                
+                    </tbody>
+                </table>
+            </div>
+        </section> -->
+        <section id="segunda">
+            <div id="contacto">
+                <h3>CONTACTO</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>Cartago, Costa Rica</p>
+                <p>
+                    <i class="fas fa-envelope"></i>lpiedram@ucenfotec.ac.cr</p>
+                <p>
+                    <i class="fas fa-phone"></i>+506 63261571</p>
+            </div>
+            <div id="tipos">
+                <h3>TIPOS DE POKÉMONES</h3>
+                <div id="1">
+                    <a href="#bug">
+                        <i class="fas fa-arrow-right"></i>Bug</a>
+                    <a href="#dark">
+                        <i class="fas fa-arrow-right"></i>Dark</a>
+                    <a href="#dragon">
+                        <i class="fas fa-arrow-right"></i>Dragon</a>
+                    <a href="#electric">
+                        <i class="fas fa-arrow-right"></i>Electric</a>
+                </div>
+                <div id="2">
+                    <a href="#fairy">
+                        <i class="fas fa-arrow-right"></i>Fairy</a>
+                    <a href="#fighting">
+                        <i class="fas fa-arrow-right"></i>Fighting</a>
+                    <a href="#fire">
+                        <i class="fas fa-arrow-right"></i>Fire</a>
+                    <a href="#flying">
+                        <i class="fas fa-arrow-right"></i>Flying</a>
+                </div>
+                <div id="4">
+                    <a href="#ghost">
+                        <i class="fas fa-arrow-right"></i>Ghost</a>
+                    <a href="#grass">
+                        <i class="fas fa-arrow-right"></i>Grass</a>
+                    <a href="#ground">
+                        <i class="fas fa-arrow-right"></i>Ground</a>
+                    <a href="#ice">
+                        <i class="fas fa-arrow-right"></i>Ice</a>
+                </div>
+                <div id="5">
+                    <a href="#normal">
+                        <i class="fas fa-arrow-right"></i>Normal</a>
+                    <a href="#poison">
+                        <i class="fas fa-arrow-right"></i>Poison</a>
+                    <a href="#psichic">
+                        <i class="fas fa-arrow-right"></i>Psychic</a>
+                    <a href="#rock">
+                        <i class="fas fa-arrow-right"></i>Rock</a>
+                </div>
+                <div id="6">
+                    <a href="#steel">
+                        <i class="fas fa-arrow-right"></i>Steel</a>
+                    <a href="#water">
+                        <i class="fas fa-arrow-right"></i>Water</a>
+                </div>
+            </div>
+            <div id="perfil">
+                <h3>PERFIL</h3>
+                <div>
+                    <a href="registrar.html">
+                        <i class="fas fa-arrow-right"></i>Registrar</a>
+                    <a href="pokemones.html">
+                        <i class="fas fa-arrow-right"></i>Pokémones</a>
+                    <a href="entrenadores.html">
+                        <i class="fas fa-arrow-right"></i>Entrenadores</a>
+                    <a href="capturar.html">
+                        <i class="fas fa-arrow-right"></i>Capturar</a>
+                </div>
+            </div>
+        </section>
+        <section id="tercera">
+            <p>© 2018 Examen 1. Todos los derechos reservados | Diseñado por Lohana</p>
+        </section>
+    </main>
+    <footer>
+        <div id="redes">
+            <a href="">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-dribbble"></i>
+            </a>
+            <a href="">
+                <i class="fab fa-vimeo-v"></i>
+            </a>
+        </div>
+    </footer>
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.cloudinary/1.0.18/jquery.cloudinary.js' type='text/javascript'></script>
+    <script src="https://widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/servicioImagen.js"></script>
+    <script src="js/servicio.js"></script>
+    <script src="js/controlador.js"></script>
+</body>
+
+</html>

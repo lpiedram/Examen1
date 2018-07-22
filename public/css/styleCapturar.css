@@ -84,63 +84,8 @@ header{
 main{
 
 }
-    main section#primera{
-        height: 1550px;
-        margin-top: 10px;
-    }
-        main sectio#primera div#titulo{
-            height: 223px;
-            margin-top: 30px;
-        }
-            main section#primera div#titulo h2{
-                text-align: center;
-                color: #212121;
-                padding-bottom: .3em;
-                position: relative;
-                font-size: 2.5em;
-                text-transform: uppercase;
-            }
-             main section#primera div#titulo hr{
-                background: #3399cc;
-                border: #3399cc;
-                height: 3px;
-                width: 15%;
 
-             }
-        main section#primera div#cardsContainer{
-            background: #999;
-            margin: 30px 150px;
-            margin-right: 0px;
-        }
-            main section#primera div#card{
-                width: 200px;
-                height: 240px;
-                background: #fff;
-                float: left;
-                border: 2px solid #cccccc;
-                padding: 20px 20px;
-                margin: 20px 20px;
-            }
-                main section#primera div#card img{
-                    width: 150px;
-                    height: 150px;
-                    text-align: center;
-                    margin-bottom: 15px;
-                }
-                main section#primera div#card button{
-                    text-decoration: none;
-                    text-align: center;
-                    padding: .5em 20px;
-                    margin: 0px 0px 10px 32px;
-                    background: #3399cc;
-                    position: relative;
-                    color: #fff;
-                    border: none;
-                }
-                    main section#primera div#card button:hover{
-                        background: #fe9126;
-                    }
-    main section#segunda{
+main section#segunda{
         background: #2b2a2a;
         height: 380px;
         width: 100%;
