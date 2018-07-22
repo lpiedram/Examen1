@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="css/styleSlider.css">
-    <link rel="stylesheet" href="css/styleLanding.css">
+    <link rel="stylesheet" href="css/styleEntrenadores.css">
 
 </head>
 
@@ -41,7 +40,55 @@
         </nav>
     </header>
     <main>
-
+        <section id="primera">
+            <h2>Entrenadores</h2>
+            <div id="registrar">
+                <div>
+                    <label for="txtNum">Numero de Entrenador</label>
+                    <input type="number" id="txtNum" min="0">
+                </div>
+                <div>
+                    <label for="txtNombre">Nombre del Entrenador</label>
+                    <input type="text" id="txtNombre">
+                </div>
+                <div>
+                    <label for="txtEdad">Edad</label>
+                    <input type="number" id="txtEdad" min="15" max="80">
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Género</legend>
+                        <label for="rbtFem">Femenino</label>
+                        <input type="radio" name="rbtGen" id="rbtFem" value="true">
+                    
+                        <label for="rbtMas">Masculino</label>
+                        <input type="radio" name="rbtGen" id="rbtMas" value="false">
+                    </fieldset>
+                </div>
+                <div>
+                    <button type="button" id="btnFoto">Agregar fotografía</button>
+                </div>
+                <button type="button" id="btnRegistrar">Registrar</button>
+            </div>
+            <div id="listarE">
+                <div>
+                    <label for="txtFiltro">Buscar</label>
+                    <input type="text" id="txtFiltro">
+                </div>
+                <table id="tblEntrenador">
+                    <thead>
+                        <th>Numero</th>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Género</th>
+                        <th>Imagen</th>
+                    </thead>
+                    <tbody>
+            
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <section id="segunda">
             <div id="contacto">
                 <h3>CONTACTO</h3>
