@@ -1,0 +1,58 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+header{
+    height: 220px;
+    width: 100%;
+}
+    header #primero{
+        background: #000;
+        height: 60px;
+        padding-top: 10px;
+        padding-right: 200px;
+    }
+        header #primero p{
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            float: right;
+        }
+    header #segundo{
+        height: 110px;
+        width: 100%;
+    }
+        header #segundo #seg1{
+            float: left;
+            width: 410px;
+            padding: 25px 67px 30px 60px;
+        }
+            header #segundo #seg1 i{
+                padding-right: 10px;
+            }
+        header #segundo #seg2{
+            float: left;
+            width: 410px;
+            padding: 5px 67px 0px 60px;
+        }
+            header #segundo #seg2 h1{
+                color: #fe9126;
+                font-size: 40px;
+                display: block;
+                font-weight: bold;
+            }
+        header #segundo #seg3{
+            float: left;
+            width: 410px;
+            padding: 45px 67px 30px 100px;
+        }
+            header #segundo #seg3 input{
+                width: 83%;
+                padding: 10px;
+                border: 1px solid #cccccc;
+                color: #999;
+                outline: none;
+                font-size: 14px;
+            }

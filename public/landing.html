@@ -7,27 +7,30 @@
     <title>Examen 1</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/styleSlider.css">
+    <link rel="stylesheet" href="css/styleLanding.css">
+    
 </head>
 <body>
     <header>
         <div id="primero">
-            <label for="">HELP</label>
+            <p>HELP</p>
         </div>
         <div id="segundo">
-            <div id="seg.1">
-                <p><i class="fas fa-phone"></i>Call us: 63261571</p>
+            <div id="seg1">
+                <p><i class="fas fa-phone"></i>Call us: +506 63261571</p>
             </div>
-            <div id="seg.2">
+            <div id="seg2">
                 <h1>POKÉMON</h1>
             </div>
-            <div id="seg.3">
+            <div id="seg3">
                 <input type="text" id="txtBuscar" placeholder="Buscar">
-                <i class="fas fa-search"></i>
+                <a href="" id="btnFiltrar"><i class="fas fa-search"></i></a>
             </div>
         </div>
         <nav>
-            <a href="index.html">Prokémones</a>
+            <a href="index.html">Pokémones</a>
             <a href="">Entrenadores</a>
             <a href="">Capturar</a>
         </nav>
@@ -35,7 +38,6 @@
     <main>
         <!-- Slideshow container -->
         <div class="slideshow-container">
-        
             <!-- Full-width images with number and caption text -->
             <div class="mySlides fade">
                 <div class="numbertext">1 / 6</div>
@@ -81,11 +83,138 @@
                 <span class="dot" onclick="currentSlide(6)"></span>
             </div>
         </div>
-        <br>
-        
+        <section id="primera">
+            <div>
+                <h2>Tipos de Pokémones</h2>
+            </div>
+            <div id="cardsContainer">
+                <div id="card">
+                    <img src="img/tipoBug.jpg" alt="" id="bug">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoDark.jpg" alt="" id="dark">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoDragon.jpg" alt="" id="dragon">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoElectric.jpg" alt="" id="electric">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoFairy.jpg" alt="" id="fairy">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoFighting.jpg" alt="" id="fighting">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoFairy.jpg" alt="" id="fairy">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoFire.jpg" alt="" id="fire">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoFlying.jpg" alt="" id="flying">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoGhost.jpg" alt="" id="ghost">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoGrass.jpg" alt="" id="grass">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoBug.jpg" alt="" id="bug">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoGround.jpg" alt="" id="ground">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoIce.jpg" alt="" id="ice">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoNormal.jpg" alt="" id="normal">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoPoison.jpg" alt="" id="poison">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoPsichic.jpg" alt="" id="psichic">
+                    <a href="">Ver más</a>
+                </div>
+                <div id="card">
+                    <img src="img/tipoRock.jpg" alt="" id="rock">
+                    <a href="">Ver más</a>
+                </div>
+            </div>
+        </section>
+        <section id="segunda">
+            <div id="contacto">
+                <h3>CONTACTO</h3>
+                <p><i class="fas fa-map-marker-alt"></i>Cartago, Costa Rica</p>
+                <p><i class="fas fa-envelope"></i>lpiedram@ucenfotec.ac.cr</p>
+                <p><i class="fas fa-phone"></i>+506 63261571</p>
+            </div>
+            <div id="tipos">
+                <h3>TIPOS DE POKÉMONES</h3>
+                <div id="izq">
+                    <a href="#bug"><i class="fas fa-arrow-right"></i>Bug</a>
+                    <a href="#dark"><i class="fas fa-arrow-right"></i>Dark</a>
+                    <a href="#dragon"><i class="fas fa-arrow-right"></i>Dragon</a>
+                    <a href="#electric"><i class="fas fa-arrow-right"></i>Electric</a>
+                    <a href="#fairy"><i class="fas fa-arrow-right"></i>Fairy</a>
+                    <a href="#fighting"><i class="fas fa-arrow-right"></i>fighting</a>
+                    <a href="#fire"><i class="fas fa-arrow-right"></i>Fire</a>
+                    <a href="#flying"><i class="fas fa-arrow-right"></i>Flying</a>
+                    <a href="#ghost"><i class="fas fa-arrow-right"></i>Ghost</a>
+                </div>
+                <div id="der">
+                    <a href="#grass"><i class="fas fa-arrow-right"></i>Grass</a>
+                    <a href="#ground"><i class="fas fa-arrow-right"></i>Ground</a>
+                    <a href="#ice"><i class="fas fa-arrow-right"></i>Ice</a>
+                    <a href="#normal"><i class="fas fa-arrow-right"></i>Normal</a>
+                    <a href="#poison"><i class="fas fa-arrow-right"></i>Poison</a>
+                    <a href="#psichic"><i class="fas fa-arrow-right"></i>Psychic</a>
+                    <a href="#rock"><i class="fas fa-arrow-right"></i>Rock</a>
+                    <a href="#steel"><i class="fas fa-arrow-right"></i>Steel</a>
+                    <a href="#water"><i class="fas fa-arrow-right"></i>Water</a>
+                </div>
+            </div>
+            <div id="perfil">
+                <h3>PERFIL</h3>
+                <div>
+                    <a href="registrar.html"><i class="fas fa-arrow-right"></i>Registrar</a>
+                    <a href="pokemones.html"><i class="fas fa-arrow-right"></i>Pokémones</a>
+                    <a href="entrenadores.html"><i class="fas fa-arrow-right"></i>Entrenadores</a>
+                    <a href="capturar.html"><i class="fas fa-arrow-right"></i>Capturar</a>
+                </div>
+            </div>
+        </section>
+        <section id="tercera">
+            <p>© 2018 Examen 1. Todos los derechos reservados | Diseñado por Lohana</p>
+        </section>
     </main>
     <footer>
-
+        <div id="redes">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-dribbble-square"></i>
+            <i class="fab fa-vimeo-square"></i>
+        </div>
     </footer>
     <script src='http://code.jquery.com/jquery-latest.js'></script>
     <script src="js/slider.js"></script>
