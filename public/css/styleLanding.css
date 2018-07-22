@@ -49,10 +49,219 @@ header{
             padding: 45px 67px 30px 100px;
         }
             header #segundo #seg3 input{
-                width: 83%;
+                width: 80%;
                 padding: 10px;
                 border: 1px solid #cccccc;
                 color: #999;
                 outline: none;
                 font-size: 14px;
             }
+            header #segundo #seg3 i{
+                background: #fe9126;
+                padding: 11px 12px;
+                color: #fff;
+                border-radius: 4px;
+            }
+            header #segundo #seg3 i:hover{
+                background: #333;
+            }
+        header nav{
+            width: 100%;
+            background: #fe9126;
+            height: 50px;
+            padding: 15px 0px;
+        }
+            header nav a{
+                color: #fff;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 0px 150px;
+            }
+main{
+
+}
+    main section#primera{
+        height: 1550px;
+        margin-top: 10px;
+    }
+        main sectio#primera div#titulo{
+            height: 223px;
+            margin-top: 30px;
+        }
+            main section#primera div#titulo h2{
+                text-align: center;
+                color: #212121;
+                padding-bottom: .3em;
+                position: relative;
+                font-size: 2.5em;
+                text-transform: uppercase;
+            }
+             main section#primera div#titulo hr{
+                background: #3399cc;
+                border: #3399cc;
+                height: 3px;
+                width: 15%;
+
+             }
+        main section#primera div#cardsContainer{
+            background: #999;
+            margin: 30px 150px;
+            margin-right: 0px;
+        }
+            main section#primera div#card{
+                width: 200px;
+                height: 240px;
+                background: #fff;
+                float: left;
+                border: 2px solid #cccccc;
+                padding: 20px 20px;
+                margin: 20px 20px;
+            }
+                main section#primera div#card img{
+                    width: 150px;
+                    height: 150px;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+                main section#primera div#card a{
+                    text-decoration: none;
+                    text-align: center;
+                    padding: .5em 15px;
+                    margin: 30px 0px 0px 25px;
+                    background: #3399cc;
+                    position: relative;
+                    color: #fff;
+                }
+                    main section#primera div#card a:hover{
+                        background: #fe9126;
+                    }
+    main section#segunda{
+        background: #2b2a2a;
+        height: 380px;
+        width: 100%;
+        color: #fff;
+    }
+        main section#segunda div#contacto{
+            height: 350px;
+            width: 30%;
+            float: left;
+            padding: 85px 40px 80px 40px;
+        }
+            main section#segunda div#contacto h3{
+                    color: #ffffff;
+                    font-size: 1.5em;
+                    margin-bottom: 1.8em;
+                    text-transform: uppercase;
+            }
+            main section#segunda div#contacto i{
+                padding-right: 20px;
+                color: #fe9126;
+            }
+            main section#segunda div#contacto p{
+                list-style-type: none;
+                margin-bottom: 1em;
+                color: #afafaf;
+                font-size: 14px;
+            }
+        main section#segunda div#tipos{
+            height: 350px;
+            width: 40%;
+            float: left;
+            padding: 85px 0px 70px 20px;
+        }
+            main section#segunda div#tipos h3{
+                color: #ffffff;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+                text-transform: uppercase;
+            }
+            main section#segunda div#tipos div#1{
+                float: left;
+                width: 25%;
+            }
+            
+            main section#segunda div#tipos div#2{
+                float: left;
+                width: 25%;
+            }
+            main section#segunda div#tipos div#3{
+                float: left;
+                width: 25%;
+            }
+            main section#segunda div#tipos div#4{
+                float: left;
+                width: 25%;
+            }
+                main section#segunda div#tipos i{
+                    padding-right: 20px;
+                    color: #fe9126;
+                    margin-bottom: 1.3em;
+                }
+                main section#segunda div#tipos a{
+                    list-style-type: none;
+                    margin-bottom: 0.5em;
+                    padding-right: 20px;
+                    color: #afafaf;
+                    font-size: 14px;
+                    display: inline-block;
+                }
+        main section#segunda div#perfil{
+            height: 350px;
+            width: 30%;
+            float: left;
+            padding: 85px 0px 70px 0px;
+        }
+            main section#segunda div#perfil h3{
+                color: #ffffff;
+                font-size: 1.5em;
+                margin-bottom: 1em;
+                text-transform: uppercase;
+            }
+            main section#segunda div#perfil i{
+                    padding-right: 20px;
+                    color: #fe9126;
+                    margin-bottom: 1.3em;
+                }
+                main section#segunda div#perfil a{
+                    list-style-type: none;
+                    margin-bottom: 0.5em;
+                    padding-right: 20px;
+                    color: #afafaf;
+                    font-size: 14px;
+                    display: list-item;
+                }
+    main section#tercera{
+        background: #2b2a2a;
+        height: 60px;
+        width: 100%;
+        color: #fff;
+    }
+        main section#tercera p{
+            margin-top: 0px;
+            text-align: center;
+            padding-top: 10px; 
+        }
+footer{
+    background: #393737;
+    height: 65px;
+    padding: 20px 0px 0px 40px;
+}
+    footer a{
+        width: 32px;
+        height: 32px;
+        color: #fff;
+        border: 1px solid #fff;
+        text-align: center;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 32px;
+        border-radius: 50% 
+    }
+    footer i{
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+    }
+
