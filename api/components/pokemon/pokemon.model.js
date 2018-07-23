@@ -6,7 +6,8 @@ let pokemonSchema = new mongoose.Schema({
     numero : {type : Number, required : true},
     nombre : {type : String, required: true},
     tipo1 : {type : String, required: true},
-    tipo2 : {type : Number}
+    tipo2 : {type : Number},
+    foto: { type: String, required: true }
 });
 
 module.exports = mongoose.model('pokemon', pokemonSchema);

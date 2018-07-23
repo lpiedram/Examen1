@@ -65,16 +65,18 @@ function imprimirListaPokemon() {
         let cNombre = fila.insertCell();
         let cTipo1 = fila.insertCell();
         let cTipo2 = fila.insertCell();
+        let cFoto = fila.insertCell();
+
         let imagen = document.createElement('img');
-        imagen.src = listaPersonas[i]['foto'];
+        imagen.src = mlistaPokemon[i]['foto'];
         imagen.classList.add('imageSettings');
 
         cFoto.appendChild(imagen);
 
         cCant.innerHTML = mlistaPokemon[i]['numero'];
         cNombre.innerHTML = mlistaPokemon[i]['nombre'];
-        cTipo1.innerHTML = listaPokemon[i]['tipo1'];
-        cTipo2.innerHTML = listaPokemon[i]['tipo2'];
+        cTipo1.innerHTML = mlistaPokemon[i]['tipo1'];
+        cTipo2.innerHTML = mlistaPokemon[i]['tipo2'];
     }
 
 };

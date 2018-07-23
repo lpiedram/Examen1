@@ -1,6 +1,5 @@
 'use strict';
 
-
 function registrarPokemon(painfoPokemon) {
     let respuesta = '';
     let peticion = $.ajax({
