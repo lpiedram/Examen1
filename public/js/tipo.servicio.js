@@ -9,8 +9,7 @@ function registrarTipo(painfoTipo) {
         dataType: 'json',
         async: false,
         data: {
-            tipo1: painfoTipo[0],
-            tipo2: painfoTipo[1]
+            tipo1: painfoTipo[0]
         }
     });
 

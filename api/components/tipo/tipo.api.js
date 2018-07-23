@@ -6,8 +6,7 @@ module.exports.registrar = function (req, res) {
     //Crea una variable nuevotipo utilizando como plantilla el tipoModel
     let nuevotipo = new tipoModel({
         id: req.body.id,
-        tipo1: req.body.tipo1,
-        tipo2: req.body.tipo2
+        tipo1: req.body.tipo1
     });
 
     nuevotipo.save(function (error) {

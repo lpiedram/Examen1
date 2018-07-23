@@ -81,13 +81,13 @@ function imprimirListaPokemon() {
 
 };
 function mostrarTipo() {
-    let mlistaPokemon = obtenerListaPokemon();
+    let mlistaTipo = obtenerListaTipo();
     let sltTipo1 = document.querySelector('#sltTipo1');
 
-    for (let i = 0; i < mlistaPokemon.length; i++) {
+    for (let i = 0; i < mlistaTipo.length; i++) {
         let opcion = document.createElement('option'); //crea el elemento option
-        opcion.value = mlistaPokemon[i][1]; //Agregar el value que se puede obtener al seleccionar una opcion
-        opcion.text = mlistaPokemon[i][1]; // el texto que se va a mostrar para cada opcion
+        // opcion.value = mlistaTipo[i][1]; //Agregar el value que se puede obtener al seleccionar una opcion
+        opcion.text = mlistaTipo[i][1]; // el texto que se va a mostrar para cada opcion
 
         sltTipo1.appendChild(opcion);
     }
