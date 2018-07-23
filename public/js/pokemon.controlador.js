@@ -1,17 +1,17 @@
 'use strict'
-imprimirListaPokemon()
-mostrarTipo()
+imprimirListaPokemones()
+llenarTipos()
 
 let btnRegistrar = document.querySelector('#btnRegistrar');
 btnRegistrar.addEventListener('click', obtenerDatos);
 
 let inputNumero = document.querySelector('#txtNum');
 let inputNombre = document.querySelector('#txtNombre');
-let sltTipo1 = document.querySelector('#sltTipo1');
-let sltTipo2 = document.querySelector('#sltTipo2');
+// let sltTipo1 = document.querySelector('#sltTipo1');
+// let sltTipo2 = document.querySelector('#sltTipo2');
 let inputFiltro = document.querySelector('#txtFiltro');
 inputFiltro.addEventListener('keyup', function () {
-    imprimirListaPokemon(inputFiltro.value)
+    imprimirListaPokemones(inputFiltro.value)
 });
 
 function obtenerDatos() {
@@ -41,55 +41,107 @@ function obtenerDatos() {
             text: 'El pokemon se registró adecuadamente',
             confirmButtonText: 'Entendido'
         });
-        imprimirListaPokemon();
+        imprimirListaPokemones();
         limpiarFormulario();
     }
 };
 
-function imprimirListaPokemon(pFiltro) {
-    let mlistaPokemon = obtenerListaPokemon();
+function imprimirListaPokemones() {
+    let mlistaPokemones = obtenerListaPokemon();
     let tbody = document.querySelector('#tblPokemon tbody');
-    tbody.innerHTML = ''; 
-    if (!pFiltro) {
-        pFiltro = '';
-    }
+    tbody.innerHTML = '';
 
-    for (let i = 0; i < mlistaPokemon.length; i++) {
+    for (let i = 0; i < mlistaPokemones.length; i++) {
         let fila = tbody.insertRow();
-
-        let cCant = fila.insertCell();
+        let cNumero = fila.insertCell();
         let cNombre = fila.insertCell();
         let cTipo1 = fila.insertCell();
         let cTipo2 = fila.insertCell();
         let cFoto = fila.insertCell();
 
-        // let imagen = document.createElement('img');
-        // imagen.src = mlistaPokemon[i]['foto'];
-        // imagen.classList.add('imageSettings');
-
-        // cFoto.appendChild(imagen);
-
-        cCant.innerHTML = mlistaPokemon[i]['numero'];
-        cNombre.innerHTML = mlistaPokemon[i]['nombre'];
-        cTipo1.innerHTML = mlistaPokemon[i]['tipo1'];
-        cTipo2.innerHTML = mlistaPokemon[i]['tipo2'];
-        cFoto.innerHTML = '<img src="' + mlistaPokemon[i]['Foto'] + '">';
+        cNumero.innerHTML = mlistaPokemones[i]['numero'];
+        cNombre.innerHTML = mlistaPokemones[i]['nombre'];
+        cTipo1.innerHTML = mlistaPokemones[i]['tipo1'];
+        cTipo2.innerHTML = mlistaPokemones[i]['tipo2'];
+        cFoto.innerHTML = '<img src="' + mlistaPokemones[i]['foto'] + '">';
 
     }
 
 };
-function mostrarTipo() {
-    let mlistaTipo = obtenerListaTipo();
+
+function llenarTipos() {
+    let Tipos = [
+        { value: "BUG", text: "Bug" },
+        { value: "Dark", text: "Dark" },
+        { value: "Dragon", text: "Dragon" },
+        { value: "Electric", text: "Electric" },
+        { value: "Fairy", text: "Fairy" },
+        { value: "Fighting", text: "Fighting" },
+        { value: "Fire", text: "Fire" },
+        { value: "Flying", text: "Flying" },
+        { value: "Ghost", text: "Ghost" },
+        { value: "Grass", text: "Grass" },
+        { value: "Ground", text: "Ground" },
+        { value: "Ice", text: "Ice" },
+        { value: "Normal", text: "Normal" },
+        { value: "Poison", text: "Poison" },
+        { value: "Psychic", text: "Psychic" },
+        { value: "Rock", text: "Rock" },
+        { value: "Steel", text: "Steel" },
+        { value: "Water", text: "Water" }
+    ];
+
+    let option = "";
+    let il = Tipos.length;
     let sltTipo1 = document.querySelector('#sltTipo1');
+    let sltTipo2 = document.querySelector('#sltTipo2');
+    let inputFiltro = document.querySelector('#txtFiltro');
 
-    for (let i = 0; i < mlistaTipo.length; i++) {
-        let opcion = document.createElement('option'); //crea el elemento option
-        opcion.value = mlistaTipo[i][1]; //Agregar el value que se puede obtener al seleccionar una opcion
-        opcion.text = mlistaTipo[i][1]; // el texto que se va a mostrar para cada opcion
+    for (let i = 0; i < il; i++) {
+        option = document.createElement('option');
+        option.setAttribute('value', Tipos[i].value);
+        option.appendChild(document.createTextNode(Tipos[i].text));
+        sltTipo1.appendChild(option);
+    }
 
-        sltTipo1.appendChild(opcion);
+    for (let i = 0; i < il; i++) {
+        option = document.createElement('option');
+        option.setAttribute('value', Tipos[i].value);
+        option.appendChild(document.createTextNode(Tipos[i].text));
+        sltTipo2.appendChild(option);
+    }
+    for (let i = 0; i < il; i++) {
+        option = document.createElement('option');
+        option.setAttribute('value', Tipos[i].value);
+        option.appendChild(document.createTextNode(Tipos[i].text));
+        inputFiltro.appendChild(option);
     }
 }
+
+function filtrarDatos() {
+    if (inputFiltro.value != null || inputFiltro.value != "") {
+        let listaPokemones = filtrarPokemones("2", inputFiltro.value);
+        let tbody = document.querySelector('#tblPokemon tbody');
+        tbody.innerHTML = '';
+
+        for (let i = 0; i < listaPokemones.length; i++) {
+            let fila = tbody.insertRow();
+            let cNumero = fila.insertCell();
+            let cNombre = fila.insertCell();
+            let cTipo1 = fila.insertCell();
+            let cTipo2 = fila.insertCell();
+            let cFoto = fila.insertCell();
+            cNumero.innerHTML = listaPokemones[i]['numero'];
+            cNombre.innerHTML = listaPokemones[i]['nombre'];
+            cTipo1.innerHTML = listaPokemones[i]['tipo1'];
+            cTipo2.innerHTML = listaPokemones[i]['tipo2'];
+            cFoto.innerHTML = '<img src="' + listaPokemones[i]['foto'] + '">';
+
+        }
+    } else {
+        imprimirListaPokemones();
+    }
+};
 
 function validar() {
     let bError = false;
@@ -116,6 +168,9 @@ function validar() {
 };
 
 function limpiarFormulario() {
-    inputNombre.value = '';
-    inputNumero.value = 0;
+    inputNumero.value = null;
+    inputNombre.value = null;
+    inputTipo1.value = "";
+    inputTipo2.value = "";
+    inputFoto.value = "";
 }

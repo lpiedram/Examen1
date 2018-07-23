@@ -10,23 +10,19 @@ let inputEdad = document.querySelector('#txtEdad');
 let inputsGenero = document.querySelectorAll('input[type=radio]');
 
 let inputFiltro = document.querySelector('#txtFiltro');
-inputFiltro.addEventListener('keyup', imprimirListaEntrenador);
+inputFiltro.addEventListener('keyup', filtrarDatos);
 
 function obtenerDatos() {
     let infoEntrenador = [];
     let bError = false;
 
-    let nNum = inputNumero.value;
-    let sNom = inputNombre.value;
-    let nEdad = inputEdad.value;
-    let sTipo = '';
-    for (let i = 0; i < inputsGenero.length; i++) {
-        if (inputsGenero[i].checked == true) {
-            sTipo = JSON.parse(inputsGenero[i].value); // convierte el texto a boolean
-        }
-    }
-
-    infoEntrenador.push(nNum, sNom, nEdad, sTipo);
+    infoEntrenador.push(
+        inputNumero.value,
+        inputNombre.value,
+        inputEdad.value,
+        inputSexo.value,
+        inputFoto.value
+    );
 
     bError = validar();
     if (bError == true) {
@@ -50,82 +46,117 @@ function obtenerDatos() {
     }
 };
 
-function imprimirListaEntrenador() {
-    let mlistaEntrenador = obtenerListaEntrenador();
-    let tbody = document.querySelector('#tblEntrenador tbody');
+function imprimirListaEntrenadores() {
+    let mlistaEntrenadores = obtenerListaEntrenadores();
+    let tbody = document.querySelector('#tbEntrenadores tbody');
     tbody.innerHTML = '';
-    let sFiltro = document.querySelector('#txtFiltro').value;
 
-    if (sFiltro == '') {
-        mlistaEntrenador = obtenerListaEntrenador();
-    } else {
-        mlistaEntrenador = obtenerListaEntrenadorFiltrado(sFiltro);
-    }
-
-    for (let i = 0; i < mlistaEntrenador.length; i++) {
+    for (let i = 0; i < mlistaEntrenadores.length; i++) {
         let fila = tbody.insertRow();
-
-        let cCant = fila.insertCell();
+        let cNumero = fila.insertCell();
         let cNombre = fila.insertCell();
         let cEdad = fila.insertCell();
-        let colGenero = fila.insertCell();
+        let cSexo = fila.insertCell();
         let cFoto = fila.insertCell();
 
-        // let imagen = document.createElement('img');
-        // imagen.src = listaPersonas[i]['foto'];
-        // imagen.classList.add('imageSettings');
-        // cFoto.appendChild(imagen);
+        cNumero.innerHTML = mlistaEntrenadores[i]['Numero'];
+        cNombre.innerHTML = mlistaEntrenadores[i]['Nombre'];
+        cEdad.innerHTML = mlistaEntrenadores[i]['Edad'];
+        cSexo.innerHTML = mlistaEntrenadores[i]['Sexo'];
+        cFoto.innerHTML = '<img src="' + mlistaEntrenadores[i]['Foto'] + '">';
 
-        
-        let sGenero = '';
-        if (mlistaEntrenador[i]['genero'] == true) {
-            sGenero = 'Femenino';
-        } else {
-            sGenero = 'Masculino';
-        }
-        colGenero.innerHTML = sGenero;
-
-        cCant.innerHTML = mlistaEntrenador[i]['numero'];
-        cNombre.innerHTML = mlistaEntrenador[i]['nombre'];
-        cEdad.innerHTML = mlistaEntrenador[i]['edad'];
-        colGenero.innerHTML = mlistaEntrenador[i]['genero'];
-        cFoto.innerHTML = '<img src="' + mlistaEntrenador[i]['Foto'] + '">';
     }
 
 };
 
+function filtrarDatos() {
+    if (inputFiltro.value != null || inputFiltro.value != "") {
+        let mlistaEntrenadores = filtrarEntrenadores("2", inputFiltro.value);
+        let tbody = document.querySelector('#tbEntrenadores tbody');
+        tbody.innerHTML = '';
+
+        for (let i = 0; i < mlistaEntrenadores.length; i++) {
+            let fila = tbody.insertRow();
+            let cNumero = fila.insertCell();
+            let cNombre = fila.insertCell();
+            let cEdad = fila.insertCell();
+            let cSexo = fila.insertCell();
+            let cFoto = fila.insertCell();
+            cNumero.innerHTML = mlistaEntrenadores[i]['numero'];
+            cNombre.innerHTML = mlistaEntrenadores[i]['nombre'];
+            cEdad.innerHTML = mlistaEntrenadores[i]['edad'];
+            cSexo.innerHTML = mlistaEntrenadores[i]['sexo'];
+            cFoto.innerHTML = '<img src="' + mlistaEntrenadores[i]['foto'] + '">';
+
+        }
+    } else {
+        imprimirListaEntrenadores();
+    }
+};
+
 function validar() {
-    let bError = false;
+    let bError = null;
 
     let regexSoloLetras = /^[a-z A-ZáéíóúÁÉÍÓÚñÑ]+$/;
     let regexSoloNumeros = /^[0-9]{1,3}$/;
 
-    //Validación del nombre completo
+    //Validación de la numero
+    if (inputNumero.value == '' || (regexSoloNumeros.test(inputNumero.value) == false) || Number(inputNumero.value) < Number(inputNumero.min) || Number(inputNumero.value) > Number(inputNumero.max)) {
+        inputNumero.style.border = "1px solid #e74c3c";
+        bError = "El campo Numero solo acepta numeros -";
+    } else {
+        inputNumero.style.border = "0px solid #e74c3c";
+    }
+
+    //Validación del nombre
     if (inputNombre.value == '' || (regexSoloLetras.test(inputNombre.value) == false)) {
-        inputNombre.classList.add('error_input');
-        bError = true;
+        inputNombre.style.border = "1px solid #e74c3c";
+        if (bError == null) {
+            bError = "";
+        }
+        bError = bError + "El campo Nombre solo recibe letras -";
     } else {
-        inputNombre.classList.remove('error_input');
+        inputNombre.style.border = "0px solid #e74c3c";
     }
-    //Validación del numero
-    if (inputNumero.value == '' || (regexSoloNumeros.test(inputNumero.value) == false) || Number(inputNumero.value) < Number(inputNumero.min)) {
-        inputNumero.classList.add('error_input');
-        bError = true;
+
+    //Validación de foto
+    if (inputFoto.value == '') {
+        if (bError == null) {
+            bError = "";
+        }
+        bError = bError + "Por favor agregue una foto -";
+    }
+
+    //Validación de sexo
+    if (inputSexo.value == '') {
+        if (bError == null) {
+            bError = "";
+        }
+        inputSexo.style.border = "1px solid #e74c3c";
+        bError = bError + "Seleccione opcion en el campo Sexo -";
     } else {
-        inputNumero.classList.remove('error_input');
+        inputSexo.style.border = "0px solid #e74c3c";
     }
+
     //Validación de la edad
-    if (inputEdad.value == '' || (regexSoloNumeros.test(inputEdad.value) == false) || Number(inputEdad.value) < Number(inputEdad.min) || Number(inputEdad.value) > Number(inputEdad.max)) {
-        inputEdad.classList.add('error_input');
-        bError = true;
+    if (inputEdad.value == '' || (regexSoloNumeros.test(inputEdad.value) == false) || Number(inputEdad.value) <= Number(inputEdad.min) || Number(inputEdad.value) >= Number(inputEdad.max)) {
+        inputEdad.style.border = "1px solid #e74c3c";
+        if (bError == null) {
+            bError = "";
+        }
+        bError = bError + "El campo Edad solo recibe numeros, y la edad de ser mayor a 15 y menor a 80 ";
     } else {
-        inputEdad.classList.remove('error_input');
+        inputEdad.style.border = "0px solid #e74c3c";
     }
+
 
     return bError;
 };
 
 function limpiarFormulario() {
-    inputNombre.value = '';
-    inputNumero.value = 0;
+    inputNumero.value = null;
+    inputNombre.value = null;
+    inputEdad.value = null;
+    inputSexo.value = null;
+    inputFoto.value = "";
 }

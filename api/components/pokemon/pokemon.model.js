@@ -2,11 +2,10 @@
 let mongoose = require('mongoose');
 
 let pokemonSchema = new mongoose.Schema({
-    _id : {type: mongoose.Schema.ObjectId, auto: true},
-    numero : {type : Number, required : true},
-    nombre : {type : String, required: true},
-    tipo1 : {type : String, required: true},
-    tipo2 : {type : Number},
+    numero: { type: Number, unique: true, required: true },
+    nombre: { type: String, unique: true, required: true },
+    tipo1: { type: String, required: true },
+    tipo2: { type: String, required: false },
     foto: { type: String, required: true }
 });
 

@@ -13,8 +13,8 @@ function registrarEntrenador(painfoEntrenador) {
             numero: painfoEntrenador[0],
             nombre: painfoEntrenador[1],
             edad: painfoEntrenador[2],
-            genero: painfoEntrenador[3],
-            imagen: imagenUrl
+            sexo: painfoEntrenador[3],
+            foto: painfoEntrenador[4]
         }
     });
 
@@ -26,19 +26,22 @@ function registrarEntrenador(painfoEntrenador) {
 
     });
 
+    console.log(respuesta);
     return respuesta;
+
 }
-function obtenerListaEntrenador() {
-    let listaEntrenador = [];
+function obtenerListaEntrenadores() {
+    let mlistaEntrenadores = [];
 
     let respuesta = '';
     let peticion = $.ajax({
-        url: 'http://localhost:4000/api/listar_entrenador',
+        url: 'http://localhost:4000/api/lista_entrenador',
         type: 'get',
         contentType: 'application/x-www-form-urlencoded; charset=utf-8',
         dataType: 'json',
         async: false,
         data: {
+
         }
     });
 
@@ -52,5 +55,34 @@ function obtenerListaEntrenador() {
 
     return respuesta;
 
-    return listaEntrenador;
+    return mlistaEntrenadores;
+}
+
+function filtrarEntrenadores(cTipo, cValor) {
+    let mlistaEntrenadores = [];
+
+    let respuesta = '';
+    let peticion = $.ajax({
+        url: 'http://localhost:4000/api/filtrar_entrenador',
+        type: 'post',
+        contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType: 'json',
+        async: false,
+        data: {
+            tipo: cTipo,
+            valor: cValor
+        }
+    });
+
+    peticion.done(function (response) {
+        respuesta = response;
+    });
+
+    peticion.fail(function (response) {
+
+    });
+
+    return respuesta;
+
+    return mlistaEntrenadores;
 }

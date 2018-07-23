@@ -184,6 +184,10 @@ main{
                 main section#primera div#listarP table tbody{
                     text-align: center;
                 }
+                main section#primera div#listarP table tbody img{
+                    width: 100px;
+                    height: 100px;
+                }
     main section#segunda{
         background: #2b2a2a;
         height: 340px;
