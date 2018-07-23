@@ -71,14 +71,14 @@ function imprimirListaEntrenador() {
         let colGenero = fila.insertCell();
         let cFoto = fila.insertCell();
 
-        let imagen = document.createElement('img');
-        imagen.src = listaPersonas[i]['foto'];
-        imagen.classList.add('imageSettings');
-        cFoto.appendChild(imagen);
+        // let imagen = document.createElement('img');
+        // imagen.src = listaPersonas[i]['foto'];
+        // imagen.classList.add('imageSettings');
+        // cFoto.appendChild(imagen);
 
         
         let sGenero = '';
-        if (mListaProductos[i]['genero'] == true) {
+        if (mlistaEntrenador[i]['genero'] == true) {
             sGenero = 'Femenino';
         } else {
             sGenero = 'Masculino';
@@ -87,9 +87,9 @@ function imprimirListaEntrenador() {
 
         cCant.innerHTML = mlistaEntrenador[i]['numero'];
         cNombre.innerHTML = mlistaEntrenador[i]['nombre'];
-        cEdad.innerHTML = listaEntrenador[i]['edad'];
-        colGenero.innerHTML = listaEntrenador[i]['genero'];
-        cFoto.innerHTML = listaEntrenador[i]['foto']
+        cEdad.innerHTML = mlistaEntrenador[i]['edad'];
+        colGenero.innerHTML = mlistaEntrenador[i]['genero'];
+        cFoto.innerHTML = '<img src="' + mlistaEntrenador[i]['Foto'] + '">';
     }
 
 };

@@ -3,7 +3,6 @@ imprimirListaPokemon()
 mostrarTipo()
 
 let btnRegistrar = document.querySelector('#btnRegistrar');
-
 btnRegistrar.addEventListener('click', obtenerDatos);
 
 let inputNumero = document.querySelector('#txtNum');
@@ -11,7 +10,9 @@ let inputNombre = document.querySelector('#txtNombre');
 let sltTipo1 = document.querySelector('#sltTipo1');
 let sltTipo2 = document.querySelector('#sltTipo2');
 let inputFiltro = document.querySelector('#txtFiltro');
-inputFiltro.addEventListener('keyup', imprimirListaPokemon);
+inputFiltro.addEventListener('keyup', function () {
+    imprimirListaPokemon(inputFiltro.value)
+});
 
 function obtenerDatos() {
     let infoPokemon = [];
@@ -22,7 +23,7 @@ function obtenerDatos() {
     let slTipo1 = document.createElement('select');
     let slTipo2 = document.createElement('select');
 
-    infoPokemon.push(nNum, sNom, slTipo1, slTipo2);
+    infoPokemon.push(nNum, sNom, slTipo1, slTipo2, imagenUrl);
 
     bError = validar();
     if (bError == true) {
@@ -32,7 +33,6 @@ function obtenerDatos() {
             text: 'Por favor revise los campos en rojo',
             confirmButtonText: 'Entendido'
         });
-        console.log('No se pudo registrar el pokemon');
     } else {
         registrarPokemon(infoPokemon);
         swal({
@@ -46,16 +46,12 @@ function obtenerDatos() {
     }
 };
 
-function imprimirListaPokemon() {
+function imprimirListaPokemon(pFiltro) {
     let mlistaPokemon = obtenerListaPokemon();
     let tbody = document.querySelector('#tblPokemon tbody');
-    tbody.innerHTML = '';
-    let sFiltro = document.querySelector('#txtFiltro').value;
-
-    if (sFiltro == '') {
-        mlistaPokemon = obtenerListaPokemon();
-    } else {
-        mlistaPokemon = obtenerListaPokemonFiltrado(sFiltro);
+    tbody.innerHTML = ''; 
+    if (!pFiltro) {
+        pFiltro = '';
     }
 
     for (let i = 0; i < mlistaPokemon.length; i++) {
@@ -67,16 +63,18 @@ function imprimirListaPokemon() {
         let cTipo2 = fila.insertCell();
         let cFoto = fila.insertCell();
 
-        let imagen = document.createElement('img');
-        imagen.src = mlistaPokemon[i]['foto'];
-        imagen.classList.add('imageSettings');
+        // let imagen = document.createElement('img');
+        // imagen.src = mlistaPokemon[i]['foto'];
+        // imagen.classList.add('imageSettings');
 
-        cFoto.appendChild(imagen);
+        // cFoto.appendChild(imagen);
 
         cCant.innerHTML = mlistaPokemon[i]['numero'];
         cNombre.innerHTML = mlistaPokemon[i]['nombre'];
         cTipo1.innerHTML = mlistaPokemon[i]['tipo1'];
         cTipo2.innerHTML = mlistaPokemon[i]['tipo2'];
+        cFoto.innerHTML = '<img src="' + mlistaPokemon[i]['Foto'] + '">';
+
     }
 
 };
@@ -86,7 +84,7 @@ function mostrarTipo() {
 
     for (let i = 0; i < mlistaTipo.length; i++) {
         let opcion = document.createElement('option'); //crea el elemento option
-        // opcion.value = mlistaTipo[i][1]; //Agregar el value que se puede obtener al seleccionar una opcion
+        opcion.value = mlistaTipo[i][1]; //Agregar el value que se puede obtener al seleccionar una opcion
         opcion.text = mlistaTipo[i][1]; // el texto que se va a mostrar para cada opcion
 
         sltTipo1.appendChild(opcion);
