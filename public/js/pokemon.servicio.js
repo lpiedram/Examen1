@@ -1,6 +1,6 @@
 'use strict';
 
-function registrarPokemon(painfoPokemon) {
+function registrarPokemon(infoPokemon) {
     let respuesta = '';
     let peticion = $.ajax({
         url: 'http://localhost:4000/api/registrar_pokemon',
@@ -9,10 +9,10 @@ function registrarPokemon(painfoPokemon) {
         dataType: 'json',
         async: false,
         data: {
-            numero: painfoPokemon[0],
-            nombre: painfoPokemon[1],
-            tipo1: painfoPokemon[2],
-            tipo2: painfoPokemon[3],
+            numero: infoPokemon[0],
+            nombre: infoPokemon[1],
+            tipo1: infoPokemon[2],
+            tipo2: infoPokemon[3],
             imagen: imagenUrl
         }
     });

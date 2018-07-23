@@ -46,9 +46,9 @@ function obtenerDatos() {
     }
 };
 
-function imprimirListaEntrenadores() {
+function imprimirListaEntrenador() {
     let mlistaEntrenadores = obtenerListaEntrenadores();
-    let tbody = document.querySelector('#tbEntrenadores tbody');
+    let tbody = document.querySelector('#tblEntrenador tbody');
     tbody.innerHTML = '';
 
     for (let i = 0; i < mlistaEntrenadores.length; i++) {
@@ -59,11 +59,11 @@ function imprimirListaEntrenadores() {
         let cSexo = fila.insertCell();
         let cFoto = fila.insertCell();
 
-        cNumero.innerHTML = mlistaEntrenadores[i]['Numero'];
-        cNombre.innerHTML = mlistaEntrenadores[i]['Nombre'];
-        cEdad.innerHTML = mlistaEntrenadores[i]['Edad'];
-        cSexo.innerHTML = mlistaEntrenadores[i]['Sexo'];
-        cFoto.innerHTML = '<img src="' + mlistaEntrenadores[i]['Foto'] + '">';
+        cNumero.innerHTML = mlistaEntrenadores[i]['numero'];
+        cNombre.innerHTML = mlistaEntrenadores[i]['nombre'];
+        cEdad.innerHTML = mlistaEntrenadores[i]['edad'];
+        cSexo.innerHTML = mlistaEntrenadores[i]['sexo'];
+        cFoto.innerHTML = '<img src="' + mlistaEntrenadores[i]['foto'] + '">';
 
     }
 
@@ -90,7 +90,7 @@ function filtrarDatos() {
 
         }
     } else {
-        imprimirListaEntrenadores();
+        imprimirListaEntrenador();
     }
 };
 
